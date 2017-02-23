@@ -16,7 +16,11 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+<<<<<<< HEAD
 module Nameofapp
+=======
+module TravellerWonders
+>>>>>>> b1f71d6cd54511936b14c4f4e2774331d2206377
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
