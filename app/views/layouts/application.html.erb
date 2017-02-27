@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>traveller-wonders</title>
- <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
- <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
- <% csrf_meta_tags %>
- </head>
- <body>
-<nav>
-  <ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
-</nav>
- <%= yield %>
-<footer>
-  &copy; 2017 Traveller Wonders
-</footer>
+  <title>Traveller-Wonders</title>
 
- </body>
- </html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <!-- navbar starts here -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <!-- start navbar header -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+        data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="projectName navbar-brand">Traveller Wonders '17</a>
+    </div><!-- end navbar header -->
+    <div class="navbar-collapse collapse">
+      <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
+      <div class="form-group">
+        <%= label_tag(:q, "Search for:", class: "sr-only") %>
+        <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
+        <%= submit_tag("Go", class: "btn") %>
+        <% end %>
+      </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <%= link_to "home", "/static_pages/index" %>
+      </li>
+      
+      <li>
+        <%= link_to "about", "/static_pages/about" %>
+      </li>
+      <li>
+        <%= link_to "contact", "/static_pages/contact" %>
+      </li>    
+    </ul>
+  </div><!-- end navbar collapse -->
+</div><!-- end nav container -->
+</nav><!-- end navbar -->
+
+<%= yield %>
+
+<!-- footer -->
+ <!-- footer nav -->
+<footer>
+      <div class="container-fluid bg-footer">
+        <div class="footer-element">
+          &copy; Traveller Wonders '17
+        </div>
+
+        </div>
+        </footer>
+</body>
+</html>
