@@ -52,16 +52,135 @@ padding-top:5%;
 }
 /**** Contact ****/
 
-
-.about-page{
-  //background-color: rgba(0,0,0,0.5);
-  padding-top:15%;
+#contact {
+  background-image: url("../img/laptop.jpg");
+  /*Add a background image*/
+  background-attachment: fixed;
+  /*Give the background a fixed position does it not scroll when you scroll*/
+  background-size: cover;
+   color: white;
+   font-size: 20px;
+   font-family: 'kepler-std-semicondensed-dis', Georgia, Times New Roman, serif;
+/*Change the color of the text on top so it is readable, and adjust the padding as needed.*/
+    height: 100%;
+    padding-right: 20%;
+    padding-left: 20%;
+  
+}
+.fontbold {
+  font-weight: 700;
+  padding-bottom: 1em;
 }
 
-.about-page p{
-  font-size:1.5em;
+.text-highlight {
+  color: #ffc740;
+  font-weight: 200;
 }
 
+.highlight {
+  text-decoration-line: 10px solid rgba(255, 198, 66, 0.5);
+  
+
+  
+}
+.glyphicon {
+  vertical-align: center;
+  padding-top: none;
+}
+
+.border-wrap {
+  border-bottom: 1px solid black;
+  color: #999;
+  font-size: 1.2em;
+  font-weight: 300;
+  padding-bottom: 0.5em;
+  padding-top: 2em;
+  vertical-align: text-top;
+}
+
+.send-button {
+  background-color: #ffc740;
+  text-align: center;
+  float: right;
+  color: white;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  padding: 0.5em 2em 0.5em 2em;
+  margin-top: 1em;
+}
+/*** contact-form ***/
+.form-control {
+  width: 100%;
+  background-color: rgba(255,255,255,0.3);
+  border: 1px dashed black;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.form-group {
+  font-size: 1.6em;
+  padding-top: 1em;
+}
+
+.form-group label {
+  font-weight: 300;
+}
+
+#map {
+       height: 400px;
+       width: 100%;
+       }
+/*about*/
+.about {
+  color: black;
+  background-color:#AED6F1;
+  padding-top: 0%;
+
+}
+
+.header h1 {
+  text-align: center;
+  margin: 5% 0;
+}
+
+
+.image {
+  display: inline-block;
+  float: left;
+  padding-bottom: 5px;
+}
+
+.main_text {
+  position: relative;
+  clear: both;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 5%;
+  font-size: 16px;
+  font-family: 'kepler-std-semicondensed-dis', Georgia, Times New Roman, serif;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.skills{
+  background-color: #0099ff;
+  color: #FFF;
+ padding: 5%;
+  }
+.skills h3{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: em;
+  
+}
+
+#skill-list {
+  margin-left: 10px;
+  font-size: 16px;
+}
 
 /* footer navigation */
 
