@@ -40,6 +40,12 @@ thead tr th {
 #image {
   padding-left: 20%;
 }
+/* portfolio image grids */
+/* Large desktop */
+@media (min-width: 1200px) { ... }
+
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }
 
 /*** Search ***/
 .search {
