@@ -53,7 +53,7 @@ padding-top:5%;
 /**** Contact ****/
 
 #contact {
-  background-image: url("../img/laptop.jpg");
+  background-image: url(/assets/laptop.jpg);
   /*Add a background image*/
   background-attachment: fixed;
   /*Give the background a fixed position does it not scroll when you scroll*/
@@ -78,10 +78,8 @@ padding-top:5%;
 }
 
 .highlight {
-  text-decoration-line: 10px solid rgba(255, 198, 66, 0.5);
-  
-
-  
+  text-decoration-line: 10px solid rgba(255, 198, 66, 0.5); 
+ 
 }
 .glyphicon {
   vertical-align: center;
@@ -126,14 +124,12 @@ padding-top:5%;
   font-weight: 300;
 }
 
-#map {
-       height: 400px;
-       width: 100%;
-       }
 /*about*/
 .about {
-  color: black;
-  background-color:#AED6F1;
+  color: white;
+  background-image:url(/assets/travel.jpg);
+  background-size:cover;
+  background-attachment:fixed;
   padding-top: 0%;
 
 }
@@ -141,6 +137,8 @@ padding-top:5%;
 .header h1 {
   text-align: center;
   margin: 5% 0;
+  padding-top:5%;
+  padding-left:18%;
 }
 
 
@@ -157,7 +155,7 @@ padding-top:5%;
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 5%;
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'kepler-std-semicondensed-dis', Georgia, Times New Roman, serif;
 }
 
@@ -166,7 +164,7 @@ padding-top:5%;
 }
 
 .skills{
-  background-color: #0099ff;
+  background-color:#389FE2;
   color: #FFF;
  padding: 5%;
   }
@@ -196,12 +194,6 @@ padding-top:5%;
   padding: 10px;
 }
 
-.twitter-follow-button {
-  padding-right: 2%;
-}
-.embed-responsive-item {
-  display: block;
-}
 /* Typography about page */
 
 .about h1,
