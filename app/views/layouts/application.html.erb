@@ -37,19 +37,21 @@
         <% end %>
       </div>
     <ul class="nav navbar-nav navbar-right">
-      <li>
-        <%= link_to "home", "/static_pages/index" %>
-      </li>
-      
-      <li>
-        <%= link_to "about", "/static_pages/about" %>
-      </li>
-      <li>
-        <%= link_to "contact", "/static_pages/contact" %>
-      </li>    
-    </ul>
-  </div><!-- end navbar collapse -->
-</div><!-- end nav container -->
+        <li>
+          <%= link_to "home", "/static_pages/index" %>
+        </li>
+        <li>
+          <%= link_to "products", products_path %>
+        </li>
+        <li>
+          <%= link_to "about", "/static_pages/about" %>
+        </li>
+        <li>
+          <%= link_to "contact", "/static_pages/contact" %>
+        </li>    
+      </ul>
+    </div><!-- end navbar collapse -->
+  </div><!-- end nav container -->
 </nav><!-- end navbar -->
 
 <%= yield %>
