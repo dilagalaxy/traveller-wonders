@@ -11,11 +11,10 @@
 }
 
 h1 {
-  color: pink;
+  color: black;
   font-family: Helvetica;
   text-alignment: center;
-  padding-bottom: 2%;
-  padding-right:25%;
+
 }
 
 /*** Navbar ***/
@@ -28,7 +27,7 @@ nav ul li {
   }
 
 nav {
-  background-color: #424242;
+  background-color: blue;
   
 }
 
@@ -68,15 +67,14 @@ padding-top:5%;
   background-attachment: fixed;
   /*Give the background a fixed position does it not scroll when you scroll*/
   background-size: cover;
-  color:black;
-   font-size: 20px;
+  color:white;
+   font-size: 100%;
    font-family: 'kepler-std-semicondensed-dis', Georgia, Times New Roman, serif;
 /*Change the color of the text on top so it is readable, and adjust the padding as needed.*/
     height: 100%;
     padding-top: 4%;
-padding-right:20%;
 padding-left:20%;
-  
+padding-right:20%;
 }
 .fontbold {
   font-weight: 700;
@@ -137,8 +135,8 @@ padding-left:20%;
 
 /*about*/
 .about {
-  color:black;
-  background-image:url(/assets/travel.jpg);
+  color:white;
+  background-image:url(/assets/hike.jpg);
   background-size:cover;
   background-attachment:fixed;
   padding-top: 0%;
@@ -153,57 +151,21 @@ padding-left:20%;
 }
 
 
-.image {
-  display: inline-block;
-  float: left;
-  padding-bottom: 5px;
-}
-
-.main_text {
+.main_text p{
   position: relative;
   clear: both;
   padding: 1%;
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 5%;
-  font-size: 20px;
+  font-size: 130%;
+  font-weight: 10;
   font-family: 'kepler-std-semicondensed-dis', Georgia, Times New Roman, serif;
 }
 
-.full-width {
-  width: 100%;
-}
-
-.skills{
-  background-color:#389FE2;
-  color: #FFF;
- padding: 5%;
-  }
-.skills h3{
-  text-align: center;
-  text-transform: uppercase;
-  font-size: em;
-  
-}
-
-#skill-list {
-  margin-left: 10px;
-  font-size: 16px;
-}
 
 /* footer navigation */
 
-.bg-footer {
-  color: white;
-  background-color: #2471A3;
-  
-   
-}
-/***footer**/
-.footer-element {
-  float:right;
-  padding: 10px;
-}
 
 /* Typography about page */
 
@@ -218,12 +180,12 @@ padding-left:20%;
   font-family: Georgia, Times, Times New Roman, serif
 }
 .intro{
-  padding: 5%;
+ padding:5%;
 }
 .intro p{
   font-family: 'Amatic SC', Helvetica, Arial, sans-serif;
-  font-size: 2em;
-  font-weight: 100;
+  font-size: 130%;
+  font-weight: 50;
   /* does this belong in typography section or not? */
     -webkit-margin-before: 0em;
 }
@@ -234,7 +196,7 @@ padding-left:20%;
 .bg-font{
   background-color: #44f;
   color: #333300;
-  padding: 0px 3px;
+  
   font-family: 'Oswald' , Helvetica, Arial, sans-serif;
   display: inline-block;
   margin-top: 0;

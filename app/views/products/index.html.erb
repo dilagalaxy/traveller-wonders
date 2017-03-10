@@ -2,24 +2,26 @@
   <p id="notice"><%= notice %></p>
 </div>
 
-<table>
-      <tr>
-           <th>Product name</th>
-        <th>Image url</th>
-        <th>Product descrition</th>
-        <th>Show</th>
-        <th>Destroy</th>
-      </tr>
+<div class="row">
 
       <% @products.each do |product| %>
-        <tr>
-                 <td><%= product.name %></td>
-                 <td><%= product.image_url %></td>
-                 <td><%= product.description %></td>
-                 <td><%= link_to 'Show', product %></td>
-                 <td><%= link_to 'Edit', edit_product_path(product) %></td>
-                 <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+      <div class= "column">
+      <div class="col-xs-6 col-sm-6"</div>
+                   <br>
+                   <br>
+                   <br> 
+                  <%= link_to 'Show', product %>
+                 <%= link_to 'Edit', edit_product_path(product) %>
+                 <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= image_tag("shoes.jpg", class: "img-responsive") %>
+                <h1><%= product.name %><h1>
+                <p>  <%= product.description %>Descriptions:Awesome boots to hike.</p>
+               <p><%= product.color %> color:brown </p>
+               <strong><%= product.price %> Price:$269</strong>
+               <br>
+         
+     
+      </div>  
+      </div>
      <% end %>
-</table>
-<%= link_to 'New Product', new_product_path %>
+          <%= link_to 'New Product', new_product_path %>
