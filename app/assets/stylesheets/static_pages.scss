@@ -19,28 +19,18 @@ h1 {
 
 /*** Navbar ***/
 nav ul li {
-  text-transform: uppercase;
-  color: white;
+  text-transform: lowercase;
+  color: #fff;
   letter-spacing: 0.2em;
   font-family: Helvetica, Arial, sans-serif;
 
   }
 
-nav {
-  background-color: blue;
-  
-}
-
-thead tr th {
-  letter-spacing: 0.2em;
-}
 
 #description {
   padding-left: 10%;
 }
-#image {
-  padding-left: 20%;
-}
+
 /* portfolio image grids */
 /* Large desktop */
 @media (min-width: 1200px) {}
@@ -62,15 +52,8 @@ padding-top:5%;
 /**** Contact ****/
 
 #contact {
-  background-image: url(/assets/laptop.jpg);
-  /*Add a background image*/
-  background-attachment: fixed;
-  /*Give the background a fixed position does it not scroll when you scroll*/
-  background-size: cover;
   color:black;
    font-size: 100%;
-   font-family: 'kepler-std-semicondensed-dis', Georgia, Times New Roman, serif;
-/*Change the color of the text on top so it is readable, and adjust the padding as needed.*/
     height: 100%;
     padding-top: 4%;
 padding-left:20%;
@@ -136,9 +119,6 @@ padding-right:20%;
 /*about*/
 .about {
   color:black;
-  background-image:url(/assets/hike.jpg);
-  background-size:cover;
-  background-attachment:fixed;
   padding-top: 0%;
 
 }
