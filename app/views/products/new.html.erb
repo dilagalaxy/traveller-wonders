@@ -1,7 +1,12 @@
-<h1>New Product</h1>
 
-<div class= "col-md-6">
-<%= render 'form', product: @product %>
-
-<%= link_to 'Back', products_path %>
+<div class="container-own bg-setting style style7">
+  <div class="content opaque-bg">
+    <h2 class="centered-text">New Product</h1>
+      <div class="centered-item">
+        <%= render 'form', product: @product%>
+      </div>
+      <p class="centered-text">
+        <%= link_to 'Back', products_path %>
+      </p>
+  </div>
 </div>
