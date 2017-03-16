@@ -1,17 +1,18 @@
-<% @products.each do |product| %>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <h3><%= product.name %></h3>
+ <div class="col-md-6">
+ <br>
+ <br>
+        <h3>Name: <%= product.name %></h3>
          <%= if(product.image_url != nil && product.image_url != "" )
             link_to(image_tag(product.image_url, class: "img-responsive product-image"), product)
           else 
             "No image."
           end %>
-        <p><%= product.description %><br>
-        <%= product.color %><br>
-        <%= product.price %> &price;<br>
+        <p> Description: <%= product.description %><br>
+       Color: <%= product.color %><br>
+        Price: <%= product.price %> <br>
         <%= link_to 'Show', product %>
         <%= link_to 'Edit', edit_product_path(product) %>
         <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </div><!-- /col -->
-    <% end %>
+
  
