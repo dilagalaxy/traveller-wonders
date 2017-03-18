@@ -1,19 +1,39 @@
+    <section>
 
-<div class="container-own bg-setting style style6">
-  <div class="content opaque-bg shadow">
-    <p class="centered-text" id="notice"><%= notice %></p>
-    <h2 class="centered-text"><%= @product.name %></h2>
-    <div class="centered-item">
-      <%= image_tag(@product.image_url, alt: "product-image", class: "responsive-img-100") %>
-    </div><!--end product-card-->
-    <p class="centered-text">
-      <strong>Color: <%= @product.color %></strong>,
-    </p>
-    <p class="centered-text">
-      <strong><%= @product.price %> €</strong>
-    </p>
-    <p class="centered-text"><%= @product.description %></p>
-    <p class="centered-text"><%= link_to 'Back', products_path %>
-    </p>
-  </div><!--end content-->
-</div><!--end container-->
+      <div class="container pad-top pad-bottom" >
+        <div class="row margin-sides">
+          <div class="col-md-12 col-sm-12">
+            <h2 class="text-center"><%= @product.name %>
+            </h2>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
+           <div class='inner-item img-responsive img-fluid'>
+
+    <div>
+      <img src="<%= image_path(@product.image_url) %>" width="350px" alt=""
+           data-zoom-image = "<%= image_path("large/" + @product.image_url) %>"
+           class="thumbnail image-zoom img-responsive">
+        </div>
+
+          </div>
+        </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
+            <h3 class="pad-top"><strong>Description: </strong><%= @product.description %>
+            </h3>
+            <h3>
+             <strong>Color available: </strong><%= @product.color %>
+            </h3>
+            <h3 class="">
+              
+              <strong>Price: </strong><%= @product.price %> &euro;
+            </h3>
+            <p class="">
+              
+              <%= link_to 'Edit', edit_product_path(@product) %> |
+            <%= link_to 'Back', products_path %>
+            </p>
+        
+          </div>
+
+      </div>
+    </section>

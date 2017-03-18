@@ -1,3 +1,201 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+    box-sizing: border-box
+}
+body,
+html {
+    height: 100%
+}
+body {
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+    padding-top: 79px;
+    position: relative; 
+}
+.container {
+    width: 80%;
+    margin: none;
+    padding: 8em 0
+}
+.container-fluid {
+    width: 80%;
+    margin: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0
+}
+h2 {
+    font-size: 4em;
+    font-weight: 700;
+    text-align: center;
+}
+h3 {
+    font-size: 2.5em;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+}
+h4 {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center
+}
+p {
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    line-height: 30px;
+    text-align: center
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 4em;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+.pad-top {
+    padding-top: 4em
+}
+.pad-bottom {
+    padding-bottom: 4em
+}
+.pad-top-double {
+    padding-top: 8em
+}
+.pad-bottom-double {
+    padding-bottom: 8em
+}
+
+.my-image {
+      display: block; 
+      margin: auto; 
+      position: relative
+}
+.product-image {
+    width:150px;
+    position: relative;
+    margin: auto; 
+}
+
+.row {
+    text-align: center
+}
+
+.text-muted {
+  margin: 0 0 0 20px;
+}
+
+a:visited {
+    color: #fff;
+}
+a:hover {
+    background-color: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    body,
+    p {
+        text-align: center
+    }
+    h2 {
+        padding-top:20px;
+        text-align: center
+    }
+    .header-caption {
+        top: 30%
+    }
+    .carousel-indicators {
+        top: 50%
+    }
+    .carousel-caption {
+    top: 40%
+    }
+    .inner-item img {
+      max-width: 150px; 
+    }
+}
+
+@media (max-width: 767px) {
+    body,
+    h3,
+    p {
+        text-align: center
+    }
+    h2 {
+        padding-top:20px;
+        text-align: center
+    }
+    h1{
+        padding-top:20px
+    }
+    .container {
+        width: 80%
+    }
+    #contact {
+        padding-right: 10%;
+        padding-left: 10%
+    }
+    .header-caption {
+        top: 30%;
+        font-size: 62.5%
+    }
+    .inner-item img {
+      max-width: 150px; 
+    }
+        .carousel-caption {
+        top: 30%;
+    }
+}
+@media (max-width: 480px) {
+    body,
+    h3,
+    p {
+        text-align: center
+    }
+    h2 {
+        padding-top:20px;
+        text-align: center
+    }
+    .container {
+        width: 90%
+    }
+    #contact {
+        padding-right: 5%;
+        padding-left: 5%
+    }
+    .header-caption {
+        top: 30%
+    }
+    .header-caption h2 {
+        font-weight: 800;
+        text-transform:uppercase
+    }
+    .carousel-caption {
+        top: 60%;
+    }
+    .about {
+        text-align: center;
+    }
+    #copywright {
+        width: 100%;
+        text-align: center
+    }
+   
+  
+    .inner-item img {
+        width: 80%;
+    }
+}
