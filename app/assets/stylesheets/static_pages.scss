@@ -170,8 +170,10 @@ h1 {
       max-width: 200px; 
       position: relative
 }
-.footer {
+#footer{
   bottom: 0;
+  position:fixed;
+  text-align: center;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
