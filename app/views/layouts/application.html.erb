@@ -29,14 +29,7 @@
       </button>
       <a class="projectName navbar-brand">Traveller Wonders '17</a>
     </div><!-- end navbar header -->
-    <div class="navbar-collapse collapse">
-      <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
-      <div class="form-group">
-        <%= label_tag(:q, "Search for:", class: "sr-only") %>
-        <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
-        <%= submit_tag("Go", class: "btn") %>
-        <% end %>
-      </div>
+
     <ul class="nav navbar-nav navbar-right">
         <li>
           <%= link_to "home", static_pages_landing_page_path %>
@@ -51,6 +44,16 @@
           <%= link_to 'contact', static_pages_contact_path %>
         </li>    
       </ul>
+ 
+        <%= form_tag("/products", method: "get", :class => "navbar-form") do %>
+            <div class="form-group">
+            <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q, "", :class => "form-control") %>
+              
+              <%= submit_tag("Search", :class => "btn btn-default") %>
+            </div>
+            <% end %>
+            
     </div><!-- end navbar collapse -->
   </div><!-- end nav container -->
 </nav><!-- end navbar -->

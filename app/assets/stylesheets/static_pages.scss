@@ -69,12 +69,10 @@ p {
 a:visited {
     color: #000;
 }
-
-form {
-    padding-top: 10px;
-    padding-bottom: 15px;
- }   
-
+#form-group{
+    text-align:center;
+    padding-bottom: 20%;
+}
 .nav {
     color: #000;
     font-weight: 300;
@@ -147,6 +145,7 @@ h1 {
     font-size: 3em;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+    padding-top:5%;
 }
 .pad-top {
     padding-top: 4em
@@ -225,11 +224,12 @@ a:hover {
   font-size: 2em;
   right: auto;
   left: auto;
+  padding-bottom: 5%;
 }
 
 .carousel-indicators li {
   background-color: #858F93;
-  padding: 3px;
+  padding-top: 3px;
   border: none;
 }
 
