@@ -11,11 +11,11 @@ resources :users
 
    get 'static_pages/about'
 
-  get 'static_pages/contact'
-
-  post 'static_pages/thank_you'
+  root 'static_pages#contact'
    
   root 'static_pages#index'
+
+  post 'static_pages/thank_you'
   
  resources :orders, only:
 [:index, :show, :create, :destroy]
