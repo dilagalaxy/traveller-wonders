@@ -42,9 +42,15 @@
         </li>
         <li>
           <%= link_to 'contact', static_pages_contact_path %>
-        </li>    
-      </ul>
- 
+        </li>
+     <li>
+    <% if user_signed_in? %>
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    <% else %>
+    <%= link_to('Login', new_user_session_path) %>
+    <% end %>
+  </li>
+</ul>
         <%= form_tag("/products", method: "get", :class => "navbar-form") do %>
             <div class="form-group">
             <%= label_tag(:q, "Search for:") %>
@@ -58,6 +64,13 @@
   </div><!-- end nav container -->
 </nav><!-- end navbar -->
 
+ <% if notice %>
+        <p id="notice" class="notice alert alert-info"><%= notice %></p>
+        <% end %>
+
+        <% if alert %>
+        <p id="alert" class="alert alert-info"><%= alert %></p>
+        <% end %>
 <%= yield %>
 
 <!-- footer -->
