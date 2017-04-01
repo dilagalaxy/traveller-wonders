@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get'static_pages/contact'  
   post 'static_pages/thank_you'
   root 'static_pages#index'
-  post '/reset_password', to: 'reset_password#create', as: 'send_reset_password
+  post '/reset_password', to: 'reset_password#create', as: 'send_reset_password'
  resources :password_resets,     only: [:new, :create, :edit, :update]
 
 

@@ -1,37 +1,29 @@
 <div class="container">
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field form-group pad-top">
-  <div class="field pad-top form-group">
-   <h2>Log in</h2>
-    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Your Email *"%>
-  </div>
-
-  <div class="field form-group">
-    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Your password *"%>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field form-group">
-    <ul class="nav navbar-nav">
-
-            <li class="">
-                    <%= f.check_box :remember_me %>
-            </li>
-            <li class="remember">
-                    <%= f.label :remember_me %>
-            </li>
-      </ul>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <h2 class="form-signin-heading">Log in</h2>
+    <div class="field">
+      <%= f.label :email, :class => 'sr-only', :for => 'inputEmail' %><br />
+      <%= f.email_field :email, autofocus: true, :class => "form-control", :type => "email",  :required => true, :autofocus => true %>
     </div>
-  <% end -%>
 
-  <div class="field form-group">
-    <%= f.submit "Log in", class: "btn btn-primary btn-block", type: "submit" %>
-  </div>
-    <div class="field form-group">
-<%= render "devise/shared/links"%>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.label :password, :class => 'sr-only' %><br />
+      <%= f.password_field :password, autocomplete: "off", :class => "form-control", :type => "password", :required => true %>
+    </div>
 
+    <% if devise_mapping.rememberable? -%>
+      <div class="field checkbox">
+        <label>
+          <%= f.check_box :remember_me %>
+          Remember me
+        </label>
+      </div>
+    <% end -%>
+
+    <div class="actions">
+      <%= f.submit "Log in", :class => "btn btn-primary btn-block" %>
+    </div>
+    <%= render "devise/shared/links" %>
+  <% end %>
 
 </div>
