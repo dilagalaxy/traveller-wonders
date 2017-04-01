@@ -1,13 +1,13 @@
 <div class="container">
-
+ <div class="col-lg-8 col-md-12 col-sm-12 pad-top">
+          <form>
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
 
   <br>
 <h2>Change your password</h2>
-   <div class="col-lg-8 col-md-12 col-sm-12 pad-top">
-          <form>
+
   <div class="field form-group">
     <%= f.label :password, "New password" %><br />
     <% if @minimum_password_length %>
