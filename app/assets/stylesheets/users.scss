@@ -1,6 +1,28 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.pad-top {
+     padding-top: 4em
+ }
+ .pad-bottom {
+     padding-bottom: 4em
+ }
+ .pad-top-double {
+    padding-top: 8em
+ }
+ .pad-bottom-double {
+     padding-bottom: 8em
+ }
+ .pad-bottom-extra {
+     padding-bottom: 28em
+ }
+ .footer {
+   bottom: 0;
+  width: 100%;
+   /* Set the fixed height of the footer here */
+   height: 60px;
+  background-color: #f5f5f5;
+ }
 .remember {
       font-size: 0.5em;
   }
