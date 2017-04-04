@@ -3,11 +3,11 @@
 one:
   user: one
   body: MyText
-  rating: 
+  rating: 1
   product: one
 
 two:
   user: two
   body: MyText
-  rating: 
+  rating: 1
   product: two

@@ -3,6 +3,8 @@
       <div class="container pad-top pad-bottom" >
         <div class="row margin-sides">
           <div class="col-md-12 col-sm-12">
+          <br>
+          <br>
             <h2 class="text-center"><%= @product.name %>
             </h2>
           </div>
@@ -27,12 +29,43 @@
               
               <strong>Price: </strong><%= @product.price %> ;
             </h3>
-            <p class="">
+             <p class="">
               
               <%= link_to 'Edit', edit_product_path(@product) %> |
             <%= link_to 'Back', products_path %>
             </p>
-         <%= @product.highest_rating_comment %>
+            <h4>Average Rating</h4>
+         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+ 
+         <h4>Highest Rating Comment</h4>
+        <% if @product.highest_rating_comment %>
+           <%= @product.highest_rating_comment.body %>
+         <% end %>
+         <h4>Lowest Rating Comment</h4>
+         <% if @product.lowest_rating_comment %>
+           <%= @product.lowest_rating_comment.body %>
+         <% end %>
+         <p id="notice"><%= notice %></p>
+     <div class="panel panel-default">
+      <div class="panel-heading">
+         <h3 class="panel-title">Comment date and writer</h3>
+      </div>
+       <div class="panel-body">
+         Review text goes here...
+       </div>
+      <div class="panel-footer">
+         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+      </div><!--end panel-footer-->
+    </div>
+      
           </div>
 
       </div>
