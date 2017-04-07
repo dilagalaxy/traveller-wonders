@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <div class="container pad-top pad-bottom" >
 <br>
 <br>
@@ -23,7 +24,8 @@
                 
                 <strong>Price: </strong><%= @product.price %> 
               </h3>
-             <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+              <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+      </div>
   
              <p class="">
               
@@ -32,11 +34,11 @@
             </p>
           </div>
   <div class="col-lg-12 col-md-12 col-sm-12 pad-bottom pad-top">
-               <%= render 'new_comment', product: @product %>
-           </div>
-           <div>
-               <%= render 'comments', product: @product %>
-           </div>
+
+               </div>
+   <%= render "new_comment" %>
+   <%= render "comments" %>
+  </div>
   
         </div>
       </section>
