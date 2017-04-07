@@ -1,72 +1,42 @@
-    <section>
-
-      <div class="container pad-top pad-bottom" >
-        <div class="row margin-sides">
-          <div class="col-md-12 col-sm-12">
-          <br>
-          <br>
-            <h2 class="text-center"><%= @product.name %>
-            </h2>
-          </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
-           <div class='inner-item img-responsive img-fluid'>
-
-    <div>
+<div class="container pad-top pad-bottom" >
+<br>
+<br>
+    <h2 class="text-center"><%= @product.name %>
+    </h2>
+  <div class="row margin-sides">
+     <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
+     <div class='inner-item img-responsive img-fluid'>
+       <div>
       <img src="<%= image_path(@product.image_url) %>" width="350px" alt=""
            data-zoom-image = "<%= image_path("large/" + @product.image_url) %>"
-           class="thumbnail image-zoom img-responsive">
+         class="thumbnail image-zoom img-responsive">
         </div>
 
           </div>
         </div>
           <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
-            <h3 class="pad-top"><strong>Description: </strong><%= @product.description %>
-            </h3>
-            <h3>
-             <strong>Colour available: </strong><%= @product.colour %>
-            </h3>
-            <h3 class="">
-              
-              <strong>Price: </strong><%= @product.price %> ;
-            </h3>
+              <h3 class=""><strong>Description: </strong><%= @product.description %>
+              </h3>
+              <h3>
+               <strong>Colour available: </strong><%= @product.colour %>
+
+                
+                <strong>Price: </strong><%= @product.price %> 
+              </h3>
+             <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+  
              <p class="">
               
               <%= link_to 'Edit', edit_product_path(@product) %> |
             <%= link_to 'Back', products_path %>
             </p>
-            <h4>Average Rating</h4>
-         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
- 
-         <h4>Highest Rating Comment</h4>
-        <% if @product.highest_rating_comment %>
-           <%= @product.highest_rating_comment.body %>
-         <% end %>
-         <h4>Lowest Rating Comment</h4>
-         <% if @product.lowest_rating_comment %>
-           <%= @product.lowest_rating_comment.body %>
-         <% end %>
-         <p id="notice"><%= notice %></p>
-     <div class="panel panel-default">
-      <div class="panel-heading">
-         <h3 class="panel-title">Comment date and writer</h3>
-      </div>
-       <div class="panel-body">
-         Review text goes here...
-       </div>
-      <div class="panel-footer">
-         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-      </div><!--end panel-footer-->
-    </div>
-      
           </div>
-
-      </div>
-    </section>
+  <div class="col-lg-12 col-md-12 col-sm-12 pad-bottom pad-top">
+               <%= render 'new_comment', product: @product %>
+           </div>
+           <div>
+               <%= render 'comments', product: @product %>
+           </div>
+  
+        </div>
+      </section>
