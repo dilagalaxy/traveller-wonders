@@ -169,14 +169,9 @@ h1 {
       max-width: 200px; 
       position: relative
 }
-#footer{
-  bottom: 0;
-  position:fixed;
-  text-align: center;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
+footer{
+    text-align: center;
+    font-size: 20px;
 }
 
 .text-muted {
