@@ -3,8 +3,9 @@
 
 <div class="container">
 
-<%= render 'form', product: @product %>
-
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<%= render 'form', product: @product, class:'btn btn-default' %>
+<br>
+<%= link_to 'Show', @product, class:'btn btn-default' %> 
+<%= link_to 'Back', products_path, class:'btn btn-default'  %>
+    </div> 
 </div>
