@@ -6,14 +6,11 @@ class Ability
     
     can :manage, User, id: user.id  
 
-    alias_action :create, :read, :update, to: :cru
     if user.admin?
-      can :manage, Comment
-    else
-      can :cru, Comment
-      cannot :destroy, Comment
-    end
+      can :destroy, Comment
+        can :manage, Product
+      can :destroy, User      
+      end
     
   end
 end
-  
