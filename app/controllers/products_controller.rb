@@ -11,6 +11,8 @@ class ProductsController < ApplicationController
      else
        @products = Product.all
     end
+
+    @products = @products.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /products/1
@@ -79,4 +81,5 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:name, :description, :image_url, :colour, :price)
     end
 end
+
 
