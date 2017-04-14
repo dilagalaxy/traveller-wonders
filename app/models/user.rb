@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
     has_many :orders
     has_many :comments
 
-    after_create : welcome_mail
+    after_create :welcome_mail
   def send_admin_mail
     UserMailer.welcome_message(self).deliver
   end
