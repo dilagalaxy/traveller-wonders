@@ -8,4 +8,9 @@ class User < ActiveRecord::Base
     has_many :comments
 
 
+	after_create :send_welcome_mail
+
+    def send_welcome_mail
+    UserMailer.welcome_message(self).deliver
+   end
   end
