@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
- delete 'logout' => 'sessions#destroy', :controllers => { :registraions => "user_registration"}
+devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => {:registrations => "user_registration"}
+ 
   
   resources :users
   resources :products
