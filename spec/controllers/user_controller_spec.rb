@@ -1,35 +1,34 @@
 require 'rails_helper'
  
- describe UsersController, type: :controller do
+ describe UsersController, :type => :controller do 
+
+   before do
+    @user = User.create!(email: "tw17@gmail.com", password: "123456")
+  end
  
- before do
-     @user = User.create!(email: "example@example.com", password: "test234")
-     @user1 = User.create!(email: "example1@example.com", password: "testitnow")
-   end
+   describe 'GET #show' do
  
-   describe "GET #show" do
+     context "User is logged in" do 
+       before 
+         sign_in @user 
+         get :show, id: @user.id
+       end 
  
-     context "User is logged in" do
-       before do
-         it "loads the correct user details" do
-           expect(response).to have_http_status(200)
-           expect(assign(:user)).to eq @user
-         end
+      it "loads correct user details" do
+         expect(response).to be_success
+         expect(response). to have_http_status(200)
+         expect(assigns(:user)).to eq @user
        end
      end
  
-     context 'No user is logged in' do
-       it 'redirects to login' do
+     context "No user is logged in" do 
+       before 
          get :show, id: @user.id
        end
-     end
  
-     context 'Cannont access second users show page' do
-        it "redirects to root" do
-          get :show, params: {id: @user.id}
-          redirect_to(root_path)
-        end
-     end
-   end
-
+       it "redirects to login" do 
+         expect(response).to redirect_to(root_path)
+       end
+     end 
+  end
 end
