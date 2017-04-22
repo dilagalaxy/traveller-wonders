@@ -24,9 +24,16 @@
                 <strong>Price: </strong><%= @product.price %> 
               </h3>
               <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-      </div>
-  
-             <p class="">
+          <div>
+        <%= form_tag "/payments/create" do %>
+           <%= render partial: "shared/stripe_checkout_button" %>
+         <% end %>
+       </div>
+       <br>
+      
+   </div>
+
+           <p class="">
              <% if signed_in? && current_user.admin? %>
             <%= link_to 'Edit', edit_product_path(@product), class:'btn btn-default' %>
              <% end %>    

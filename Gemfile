@@ -52,6 +52,7 @@ end
   gem 'rspec-rails', '~> 3.5'
   gem "factory_girl_rails", "~> 4.0"
   gem 'rails-controller-testing'
+  gem 'stripe'
  end
 group :development do
   gem 'sqlite3'
