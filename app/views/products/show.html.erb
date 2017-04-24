@@ -15,14 +15,14 @@
           </div>
         </div>
           <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
-              <h3 class=""><strong>Description: </strong><%= @product.description %>
+        <h3 class=""><strong>Description: </strong><%= @product.description %>
               </h3>
-              <h3>
-               <strong>Colour available: </strong><%= @product.colour %>
+          <h3>
+         <strong>Colour available: </strong><%= @product.colour %>  
+         <br>
+         <strong>Price: </strong><%= @product.price %>&euro;<br> 
+              </h3>
 
-                
-                <strong>Price: </strong><%= @product.price %> 
-              </h3>
               <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
           <div>
         <%= form_tag "/payments/create" do %>
@@ -32,6 +32,7 @@
        <br>
       
    </div>
+   <br>
 
            <p class="">
              <% if signed_in? && current_user.admin? %>
