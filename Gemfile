@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'better_errors'
 gem 'binding_of_caller'
+ gem 'stripe'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development, :test do
@@ -52,7 +53,6 @@ end
   gem 'rspec-rails', '~> 3.5'
   gem "factory_girl_rails", "~> 4.0"
   gem 'rails-controller-testing'
-  gem 'stripe'
  end
 group :development do
   gem 'sqlite3'
