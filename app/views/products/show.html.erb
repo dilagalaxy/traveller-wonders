@@ -1,47 +1,38 @@
-<div class="container pad-top pad-bottom" >
-<br>
-<br>
-    <h2 class="text-center"><%= @product.name %>
-    </h2>
-  <div class="row margin-sides">
-     <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
-     <div class='inner-item img-responsive img-fluid'>
-       <div>
-      <img src="<%= image_path(@product.image_url) %>" width="350px" alt=""
-           data-zoom-image = "<%= image_path("large/" + @product.image_url) %>"
-         class="thumbnail image-zoom img-responsive">
-        </div>
-
-          </div>
-        </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
-        <h3 class=""><strong>Description: </strong><%= @product.description %>
-              </h3>
-          <h3>
-         <strong>Colour available: </strong><%= @product.colour %>  
-         <br>
-         <strong>Price: </strong><%= @product.price %>&euro;<br> 
-              </h3>
-
-              <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-          <div>
-        <%= form_tag "/payments/create" do %>
-           <%= render partial: "shared/stripe_checkout_button" %>
-         <% end %>
-       </div>
-       <br>
-      
-   </div>
+ <div class="container pad-top pad-bottom" >
    <br>
+   <br>
+   <h2 class="text-center"><%= @product.name %></h2>
+   <div class="row margin-sides">
+     <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
+      <% if @product.image_url.present? %>
+       <%=image_tag @product.image_url, data_zoom_image: @product.image_url, class: "thumbnail image-zoom img-responsive" %>
+       <% end %>
+      </div>
 
-           <p class="">
-             <% if signed_in? && current_user.admin? %>
-            <%= link_to 'Edit', edit_product_path(@product), class:'btn btn-default' %>
-             <% end %>    
-             <%= link_to 'Back', products_path, class:'btn btn-default'%>
-              </p>
-          </div>
-       <%= render "new_comment" %>
-  <%= render "comments" %>
-  
-</div>
+      <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
+      <h3 class=""><strong>Description: </strong><%= @product.description %></h3>
+      <h3>
+       <strong>Colour available: </strong><%= @product.colour %>
+       <br>
+       <strong>Price: </strong><% @product.price %>&euro;<br>
+       </h3>
+       <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+       <div>
+
+       <%= form_tag "/payments/create" do %>
+         <%= render partial: "shared/stripe_checkout_button" %>
+       <% end %>
+      </div>
+      <br>
+      <br>
+
+      <p>
+        <% if signed_in? && current_user.admin %>
+         <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-default' %>
+      <% end %>
+      <%= link_to 'Back', products_path, class: 'btn btn-default' %>
+    </p>
+
+    <%= render "new_comment" %>
+    <%= render "comments" %>
+  </div>
