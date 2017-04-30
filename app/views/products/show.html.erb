@@ -10,11 +10,12 @@
       </div>
 
       <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
+      <br>
       <h3 class=""><strong>Description: </strong><%= @product.description %></h3>
       <h3>
        <strong>Colour available: </strong><%= @product.colour %>
        <br>
-       <strong>Price: </strong><% @product.price %>&euro;<br>
+       <strong>Price: </strong> <%= @product.price %>&euro;<br>
        </h3>
        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
        <div>
@@ -32,7 +33,7 @@
       <% end %>
       <%= link_to 'Back', products_path, class: 'btn btn-default' %>
     </p>
-
     <%= render "new_comment" %>
     <%= render "comments" %>
+   
   </div>
