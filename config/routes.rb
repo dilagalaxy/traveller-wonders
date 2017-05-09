@@ -14,6 +14,7 @@ end
   get 'static_pages/about'
   get'static_pages/contact'  
   post 'static_pages/thank_you'
+  post 'payments/create'
 
   root 'static_pages#index'
 end
