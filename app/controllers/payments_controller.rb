@@ -13,10 +13,10 @@ class PaymentsController < ApplicationController
         :currency => "eur",
         :source => token,
         :description => params[:stripeEmail]
-      )
+        )
       if charge.paid
-       Order.create(product_id: @product.id, user_id: @user.id, total: @product.price, created_at: Time.now)
-     end
+        Order.create(product_id: @product.id, user_id: @user.id, total: @product.price, created_at: Time.now)
+      end
     rescue Stripe::CardError => e
       # The card has been declined
       body = e.json_body
