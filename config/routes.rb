@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'called/payments'
 
 devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "user_registrations" }
 
@@ -14,7 +13,8 @@ end
   get 'static_pages/about'
   get'static_pages/contact'  
   post 'static_pages/thank_you'
-  post 'payments/create'
 
   root 'static_pages#index'
+
+    post 'payments/create'
 end
