@@ -11,8 +11,10 @@
 }
 body,
 html {
+
     height: 100%
 }
+
 body {
     font-size: 12px;
     font-family: 'Raleway', sans-serif;
@@ -20,6 +22,84 @@ body {
     margin: 0;
     padding-top: 79px;
     position: relative; 
+
+}
+
+
+.lpbody,
+.search-bg{
+  background: url('/assets/girl.jpg') no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
+
+
+.lpsearch {
+  margin-top: 2em;
+}
+
+.search-container {
+  margin: 10% auto 0;
+  max-width: 600px;
+  min-width: 225px;
+  position: relative;
+  width: 75%;
+}
+
+.search-bg {
+  background-position: center;
+  bottom: 0;
+  -webkit-filter: blur(5px);
+  filter: url('/media/blur.svg#blur'), blur(5px);
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99;
+}
+
+.search {
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  font-weight: normal;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  z-index: 100;
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    background-color: transparent;
+  }
+
+  h1 {
+    color: black;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .lpbody {
+    padding: 10px;
+  }
+
+  .search-bg {
+    background-position: center -10px;
+  }
+}
+
+.lpaction {
+  display: inline-block;
+  margin-top: 1em;
 }
 .container {
     width: 80%;
