@@ -17,7 +17,7 @@
        <br>
        <strong>Price: </strong> <%= @product.price %>&euro;<br>
        </h3>
-       <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+       <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div></p>
        <div>
 
        <%= form_tag "/payments/create" do %>
