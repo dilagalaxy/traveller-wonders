@@ -3,21 +3,18 @@ class StaticPagesController < ApplicationController
   end
 
   def landing_page
-     @products = Product.limit(3)
-    # featured_product = Product.second
-   end
-
-     def contact
+    @products = Product.limit(5)
   end
 
   def thank_you
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]
-    ActionMailer::Base.mail(:from => @email,
-        :to => 'startbeautiful@gmail.com',
-        :subject => "A new contact form message from #{@name}",
-        :body => @message).deliver_now
+    UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
+  private
+    def contact_params
+      params.require(:name, :email, :message)
+    end
 end
