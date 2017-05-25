@@ -1,13 +1,15 @@
  <div class="container pad-top pad-bottom" >
    <br>
    <br>
+   <% cache @product do %>
    <h2 class="text-center"><%= @product.name %></h2>
+   <% end %>
    <div class="row margin-sides">
      <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
-     <% cache @product do %>
+
       <% if @product.image_url.present? %>
       <%= image_tag(@product.image_url, data_zoom_image: "@product.image_url", class: "img-zoom img-responsive product-img") %>
-       <% end %>
+      
       </div>
 
       <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
