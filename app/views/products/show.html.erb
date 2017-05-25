@@ -4,6 +4,7 @@
    <h2 class="text-center"><%= @product.name %></h2>
    <div class="row margin-sides">
      <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
+     <% cache @product do %>
       <% if @product.image_url.present? %>
       <%= image_tag(@product.image_url, data_zoom_image: "@product.image_url", class: "img-zoom img-responsive product-img") %>
        <% end %>
@@ -35,5 +36,5 @@
     </p>
     <%= render "new_comment" %>
     <%= render "comments" %>
-   
+   <% end %>
   </div>
