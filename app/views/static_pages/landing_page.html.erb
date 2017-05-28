@@ -8,6 +8,7 @@
             <% @products.each do |product| %>
             <div class="item<%= " active" if product == @products.first %>">
                <%= image_tag(product.image_url, :class => 'carousel-image') %>
+               <br>
                <div class="carousel-caption">
                   <%= product.name%>
                </div>
