@@ -11,9 +11,8 @@ box-sizing: border-box
 }
 body,
 html {
-
 height: 100%
-background: url('/assets/world.jpg') no-repeat center center fixed;
+background: #fffff url('/assets/world.jpg') no-repeat center center;
 -moz-background-size: cover;
 -o-background-size: cover;
 -webkit-background-size: cover;
@@ -33,7 +32,7 @@ position: relative;
 
 .lpbody,
 .search-bg{
-background: url('/assets/girl.jpg') no-repeat center center fixed;
+background: #fffff url('/assets/girl.jpg') no-repeat center center;
 -moz-background-size: cover;
 -o-background-size: cover;
 -webkit-background-size: cover;
