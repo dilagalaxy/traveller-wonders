@@ -1,19 +1,19 @@
-<div class='container center'>
+	<div class='container-center'>
 
-<div class="search-container">
-	<div class="search-bg"></div>
-	<div class="search">
-		<h1>Traveller Wonders a dream come true! </h1>
+	<div class="search-container">
+		<div class="search-bg"></div>
+		<div class="search">
+			<h1>Traveller Wonders a dream come true! </h1>
 
-		<div class="lpaction">
-	    <%= form_tag("/products", method: "get", class: "form-inline lpsearch", role: "search") do %>
-	      <div class="form-group">
-	        <%= text_field_tag(:q, nil, placeholder: "Search for it here", class: "form-control") %>
-	      </div>
-	      <%= submit_tag("Search", class: "btn btn-default") %>
-	    <% end %>
-	  </div>
-	  <div class="lpaction">or <%= link_to "Browse", products_path %></div>
-	</div><!-- /search -->
-</div><!-- /search-container -->
-</div>
+			<div class="lpaction">
+		    <%= form_tag("/products", method: "get", class: "form-inline lpsearch", role: "search") do %>
+		      <div class="form-group">
+		        <%= text_field_tag(:q, nil, placeholder: "Search for it here", class: "form-control") %>
+		      </div>
+		      <%= submit_tag("Search", class: "btn btn-default") %>
+		    <% end %>
+		  </div>
+		  <div class="lpaction">or <%= link_to "Browse", products_path %></div>
+		</div><!-- /search -->
+	</div><!-- /search-container -->
+	</div>

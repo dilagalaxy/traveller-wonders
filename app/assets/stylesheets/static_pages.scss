@@ -1,114 +1,119 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
- 
- // Place all the styles related to the static_pages controller here.
+
+// Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 * {
-    box-sizing: border-box
+box-sizing: border-box
 }
 body,
 html {
 
-    height: 100%
+height: 100%
+background: url('/assets/world.jpg') no-repeat center center fixed;
+-moz-background-size: cover;
+-o-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
 }
 
 body {
-    font-size: 12px;
-    font-family: 'Raleway', sans-serif;
-    padding: 0;
-    margin: 0;
-    padding-top: 79px;
-    position: relative; 
+font-size: 12px;
+font-family: 'Raleway', sans-serif;
+padding: 0;
+margin: 0;
+padding-top: 79px;
+position: relative; 
 
 }
 
 
 .lpbody,
 .search-bg{
-  background: url('/assets/girl.jpg') no-repeat center center fixed;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
- }
+background: url('/assets/girl.jpg') no-repeat center center fixed;
+-moz-background-size: cover;
+-o-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+}
 
 
 .lpsearch {
-  margin-top: 2em;
+margin-top: 2em;
 }
 
 .search-container {
-  margin: 10% auto 0;
-  max-width: 600px;
-  min-width: 225px;
-  position: relative;
-  width: 75%;
+margin: 10% auto 0;
+max-width: 600px;
+min-width: 225px;
+position: relative;
+width: 75%;
 }
 
 .search-bg {
-  background-position: center;
-  bottom: 0;
-  -webkit-filter: blur(5px);
-  filter: url('/media/blur.svg#blur'), blur(5px);
-  left: 0;
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 99;
+background-position: center;
+bottom: 0;
+-webkit-filter: blur(5px);
+filter: url('/media/blur.svg#blur'), blur(5px);
+left: 0;
+margin: 0 auto;
+position: absolute;
+right: 0;
+top: 0;
+z-index: 99;
 }
 
 .search {
-  background-color: rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-  font-weight: normal;
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-  text-align: center;
-  z-index: 100;
+background-color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0.5);
+color: black;
+font-weight: normal;
+margin: 0 auto;
+padding: 20px;
+position: relative;
+text-align: center;
+z-index: 100;
 
-  a {
-    color: black;
-    text-decoration: underline;
-  }
+a {
+color: black;
+text-decoration: underline;
+}
 
-  a:hover {
-    background-color: transparent;
-  }
+a:hover {
+background-color: transparent;
+}
 
-  h1 {
-    color: black;
-    margin-bottom: 0;
-  }
+h1 {
+color: black;
+margin-bottom: 0;
+}
 }
 
 @media (max-width: 600px) {
-  .lpbody {
-    padding: 10px;
-  }
+.lpbody {
+padding: 10px;
+}
 
-  .search-bg {
-    background-position: center -10px;
-  }
+.search-bg {
+background-position: center -10px;
+}
 }
 
 .lpaction {
-  display: inline-block;
-  margin-top: 1em;
+display: inline-block;
+margin-top: 1em;
 }
 .container {
-    width: 80%;
-    margin: none;
-    padding: 8em 0
+width: 80%;
+margin: none;
+padding: 8em 0
 }
 .container-fluid {
-    width: 80%;
-    margin: none;
+width: 80%;
+margin: none;
 }
 h1,
 h2,
@@ -116,79 +121,79 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
-    margin-bottom: 0
+margin-top: 0;
+margin-bottom: 0
 }
 h2 {
-    font-size: 3em;
-    font-weight: 700;
-    padding-bottom: 1em;
-    text-align: center;
+font-size: 3em;
+font-weight: 700;
+padding-bottom: 1em;
+text-align: center;
 }
 h3 {
-    font-size: 2em;
-    font-weight: 200;
-    text-transform: uppercase;
-    text-align: center;
-    padding-bottom: 1em
+font-size: 2em;
+font-weight: 200;
+text-transform: uppercase;
+text-align: center;
+padding-bottom: 1em
 }
 h4 {
-    font-size: 1em;
-    font-weight: 700;
-    line-height: 30px;
-    padding: 1em 0
+font-size: 1em;
+font-weight: 700;
+line-height: 30px;
+padding: 1em 0
 }
 p {
-    font-size: 1.5em;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200;
-    line-height: 30px;
-    padding: 0.5em 0;
-    text-align: center
+font-size: 1.5em;
+font-family: 'Raleway', sans-serif;
+font-weight: 200;
+line-height: 30px;
+padding: 0.5em 0;
+text-align: center
 }
 a:visited {
-    color: #000;
+color: #000;
 }
 
 // NAV BAR
 .navbar-style {
-  background-color: #F5C049;
+background-color: #F5C049;
 }
 .navbar-header .navbar-brand {
-  color: #444;
-  font-weight: 600;
+color: #444;
+font-weight: 600;
 }
 .navbar-default .navbar-brand:hover {
-  background-color: #f2d18a;
-  transition: color, background-color 600ms;
-  -webkit-transition: color, background-color 600ms;
+background-color: #f2d18a;
+transition: color, background-color 600ms;
+-webkit-transition: color, background-color 600ms;
 }
 .navbar-default .navbar-nav li a:hover {
-  font-size: 1.1em;
-  background-color: #f2d18a;
-  transition: color, background-color 600ms;
-  -webkit-transition: color, background-color 600ms;
+font-size: 1.1em;
+background-color: #f2d18a;
+transition: color, background-color 600ms;
+-webkit-transition: color, background-color 600ms;
 }
 .btn-user {
-  background: #F5C049;
-  padding: 15px;
-  font-size: 13px;
-  color: #777;
-  border: none;
+background: #F5C049;
+padding: 15px;
+font-size: 13px;
+color: #777;
+border: none;
 }
 .btn-user a:hover{
-  text-decoration: none;
-  background-color: #F5C049 !important;
+text-decoration: none;
+background-color: #F5C049 !important;
 }
 footer {
-  position: absolute;
-  width: 100%;
-  margin-bottom: 0px;
-  height: 100px;
-  color: #6b7a7c;
-  padding-top: 25px;
-  padding-left: 20px;
-  font-size: 2em;
+position: absolute;
+width: 100%;
+margin-bottom: 0px;
+height: 100px;
+color: #6b7a7c;
+padding-top: 25px;
+padding-left: 20px;
+font-size: 2em;
 }
 
 
@@ -196,240 +201,240 @@ footer {
 .main-title a:active,
 .main-title a:focus,
 .main-title a:hover {
-    text-decoration: none;
-    background-color: #fff;
-    font-weight: 800;
-    font-size: 2em;
-    font-family: 'Open Sans', sans-serif;
+text-decoration: none;
+background-color: #fff;
+font-weight: 800;
+font-size: 2em;
+font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-    font-weight: 700;
-    font-size: 3em;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    padding-top:5%;
+font-weight: 700;
+font-size: 3em;
+font-family: 'Open Sans', sans-serif;
+text-align: center;
+padding-top:5%;
 }
 .pad-top {
-    padding-top: 4em
+padding-top: 4em
 }
 .pad-bottom {
-    padding-bottom: 4em
+padding-bottom: 4em
 }
 .pad-top-double {
-    padding-top: 8em
+padding-top: 8em
 }
 .pad-bottom-double {
-    padding-bottom: 8em
+padding-bottom: 8em
 }
 .pad-bottom-extra {
-    padding-bottom: 28em
+padding-bottom: 28em
 }
 
 .my-image {
-      display: block; 
-      margin: auto; 
-      max-width: 200px; 
-      position: relative
+display: block; 
+margin: auto; 
+max-width: 200px; 
+position: relative
 }
 
 .text-muted {
-  margin: 0 0 0 20px;
+margin: 0 0 0 20px;
 }
 a:visited {
-    color: #000;
+color: #000;
 }
 a:hover {
-    background-color: #fff;
+background-color: #fff;
 }
 
 .carousel-inner > .item > img {
-    margin: 0 auto;
+margin: 0 auto;
 }
 
 .carousel {
-    margin-left: -15px;
-    margin-right: -15px;
-    height: 100%;
-    position: relative
+margin-left: -15px;
+margin-right: -15px;
+height: 100%;
+position: relative
 }
 .inner-item {
-    text-align: center;
-    img {
-        margin: 0 auto;
-    }
+text-align: center;
+img {
+margin: 0 auto;
+}
 }
 
 .carousel-control.left,
 .carousel-control.right {
-  background-image: none;
+background-image: none;
 }
 
 .carousel-control .glyphicon-chevron-right,
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-left {
-  color: #D2D7D9;
+color: #D2D7D9;
 }
 
 .carousel-caption {
-  position: relative;
-  color: #858F93;
-  text-shadow: none;
-  font-size: 2em;
-  right: auto;
-  left: auto;
-  padding-bottom: 5%;
+position: relative;
+color: #858F93;
+text-shadow: none;
+font-size: 2em;
+right: auto;
+left: auto;
+padding-bottom: 5%;
 }
 
 .carousel-indicators li {
-  background-color: #858F93;
-  padding-top: 3px;
-  border: none;
+background-color: #858F93;
+padding-top: 3px;
+border: none;
 }
 
 .carousel-indicators .active {
-  background-color: #D2D7D9;
+background-color: #D2D7D9;
 }
 
 .carousel-image {
-  height: 550px;
-  max-height: 550px;
-  width: auto;
-  margin: auto;
+height: 550px;
+max-height: 550px;
+width: auto;
+margin: auto;
 }
 
 a:hover {
-  text-decoration: none;
+text-decoration: none;
 }
 
 .contact {
-    background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7));
-    background-attachment: fixed;
-    background-size: cover;
-    color: #000;
-    height: auto;
-    position: relative;
-    background-repeat: no-repeat
+background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7));
+background-attachment: fixed;
+background-size: cover;
+color: #000;
+height: auto;
+position: relative;
+background-repeat: no-repeat
 }
 .search-form {
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
+padding-top: 10px;
+padding-right: 10px;
+padding-left: 10px;
 }
 .search-button {
-  border-radius: 4px;
-  background-color: #696666;
-  color: #E5E5E5;
-  border: none;
-  padding: 5px 10px;
-  box-shadow: 1px 1px 5px #484848;
-  cursor: pointer;
+border-radius: 4px;
+background-color: #696666;
+color: #E5E5E5;
+border: none;
+padding: 5px 10px;
+box-shadow: 1px 1px 5px #484848;
+cursor: pointer;
 }
 .search-field{
-  border: 1px solid #DADADA;
-  border-radius: 4px;
-  color: #888;
-  height: 30px;
-  outline: 0 none;
-  padding: 3px 3px 3px 5px;
-  font-size: 12px;
-  box-shadow: inset 0px 1px 4px #ECECEC;
-  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
-  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+border: 1px solid #DADADA;
+border-radius: 4px;
+color: #888;
+height: 30px;
+outline: 0 none;
+padding: 3px 3px 3px 5px;
+font-size: 12px;
+box-shadow: inset 0px 1px 4px #ECECEC;
+-moz-box-shadow: inset 0px 1px 4px #ECECEC;
+-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
 }
 #visible-comment {
-    font-size: 1.6em;
-    font-weight: 700;
-    padding: 0;
-    margin: 0
+font-size: 1.6em;
+font-weight: 700;
+padding: 0;
+margin: 0
 }
 #char-count {
-    font-size: 1.2em;
-    font-weight: 300;
-    text-align: left;
-    padding: 20px 0;
-    margin: 0
+font-size: 1.2em;
+font-weight: 300;
+text-align: left;
+padding: 20px 0;
+margin: 0
 }
 
 
 @media (min-width: 768px) and (max-width: 979px) {
-    body,
-    h2,
-    p {
-        text-align: center
-    }
-    .header-caption {
-        top: 30%
-    }
-    .carousel-indicators {
-        top: 50%
-    }
-    .carousel-caption {
-    top: 40%
-    }
-    .inner-item img {
-      max-width: 150px; 
-    }
+body,
+h2,
+p {
+text-align: center
+}
+.header-caption {
+top: 30%
+}
+.carousel-indicators {
+top: 50%
+}
+.carousel-caption {
+top: 40%
+}
+.inner-item img {
+max-width: 150px; 
+}
 }
 @media (max-width: 767px) {
-    body,
-    h2,
-    h3,
-    p {
-        text-align: center
-    }
-    h1{
-        padding-top:20px
-    }
-    .container {
-        width: 80%
-    }
-    #contact {
-        padding-right: 10%;
-        padding-left: 10%
-    }
-    .header-caption {
-        top: 30%;
-        font-size: 62.5%
-    }
-    .inner-item img {
-      max-width: 150px; 
-    }
-        .carousel-caption {
-        top: 30%;
-    }
+body,
+h2,
+h3,
+p {
+text-align: center
+}
+h1{
+padding-top:20px
+}
+.container {
+width: 80%
+}
+#contact {
+padding-right: 10%;
+padding-left: 10%
+}
+.header-caption {
+top: 30%;
+font-size: 62.5%
+}
+.inner-item img {
+max-width: 150px; 
+}
+.carousel-caption {
+top: 30%;
+}
 }
 @media (max-width: 480px) {
-    body,
-    h2,
-    h3,
-    p {
-        text-align: center
-    }
-    .container {
-        width: 90%
-    }
+body,
+h2,
+h3,
+p {
+text-align: center
+}
+.container {
+width: 90%
+}
 
-    #contact {
-        padding-right: 5%;
-        padding-left: 5%
-    }
-    .header-caption {
-        top: 30%
-    }
-    .header-caption h2 {
-        font-weight: 800;
-        text-transform:uppercase
-    }
-    .carousel-caption {
-        top: 60%;
-    }
-    .about {
-        text-align: center;
-    }
-   
-   
-    .inner-item img {
-        width: 80%;
-    }
+#contact {
+padding-right: 5%;
+padding-left: 5%
+}
+.header-caption {
+top: 30%
+}
+.header-caption h2 {
+font-weight: 800;
+text-transform:uppercase
+}
+.carousel-caption {
+top: 60%;
+}
+.about {
+text-align: center;
+}
+
+
+.inner-item img {
+width: 80%;
+}
 }
