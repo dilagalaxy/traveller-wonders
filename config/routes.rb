@@ -10,11 +10,11 @@ end
   resources :users
   resources :orders, only: [:index, :show, :create, :destroy]
 
-  get 'static_pages/landing_page'
+  root 'static_pages/landing_page'
   get 'static_pages/about'
   get'static_pages/contact'  
   post 'static_pages/thank_you'
   post 'payments/create'
 
-  root 'static_pages#index'
+  get 'static_pages#index'
 end
