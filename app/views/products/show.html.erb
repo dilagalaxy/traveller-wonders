@@ -19,6 +19,7 @@
     <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
       <br>
       <h3 class=""><strong>Description: </strong><%= @product.description %></h3>
+       <h3>Views: <%= @product.views %></h3>
       <h3>
        <strong>Colour available: </strong><%= @product.colour %>
        <br>
@@ -33,13 +34,7 @@
      </div>
      <br>
      <br>
-     <h6>  
-       Views:
-       <span class="badge">
-         <%= @product.views %>
-       </span>
-     </h6> 
- 
+  
       <p>
         <% if signed_in? && current_user.admin %>
          <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-default' %>
