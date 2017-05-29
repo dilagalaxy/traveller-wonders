@@ -14,26 +14,32 @@
       <% if @product.image_url.present? %>
       <%= image_tag(@product.image_url, data_zoom_image: "@product.image_url", class: "img-zoom img-responsive product-img") %>
       
-      </div>
+    </div>
 
-      <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
+    <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
       <br>
       <h3 class=""><strong>Description: </strong><%= @product.description %></h3>
       <h3>
        <strong>Colour available: </strong><%= @product.colour %>
        <br>
        <strong>Price: </strong> <%= @product.price %>&euro;<br>
-       </h3>
-       <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div></p>
-       <div>
+     </h3>
+     <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div></p>
+     <div>
 
        <%= form_tag "/payments/create" do %>
-         <%= render partial: "shared/stripe_checkout_button" %>
+       <%= render partial: "shared/stripe_checkout_button" %>
        <% end %>
-      </div>
-      <br>
-      <br>
-
+     </div>
+     <br>
+     <br>
+     <h6>  
+       Views:
+       <span class="badge">
+         <%= @product.views %>
+       </span>
+     </h6> 
+ 
       <p>
         <% if signed_in? && current_user.admin %>
          <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-default' %>

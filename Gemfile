@@ -30,6 +30,8 @@ gem 'better_errors'
 gem 'binding_of_caller'
  gem 'stripe'
  gem 'dalli'
+ gem 'redis-rails'
+ gem 'newrelic_rpm'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development, :test do
