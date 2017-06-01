@@ -17,5 +17,6 @@ end
   root 'static_pages#landing_page'
   get 'static_pages/landing_page'
   post'static_pages/thank_you'
-
+  mount ActionCable.server => '/cable'
+  
 end
