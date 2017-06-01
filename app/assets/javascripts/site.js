@@ -12,18 +12,12 @@ $(document).on('turbolinks:load ajaxSuccess', function(){
 
   refreshRating();
 
-  // elevate zoom
-  $('.img-zoom').elevateZoom({
-    responsive: true,
-    zoomWindowWidth:500,
-    zoomWindowHeight:300,
-    zoomWindowFadeIn: 500,
-    zoomWindowFadeOut: 750,
-    scrollZoom: true,
-    zoomLevel:1
-  });
-
-  $(function() {
-    $('.alert').delay(3000).fadeOut();
-  });
-});
+  
+     /* elevate zoom plugin*/
+     $(".img-zoom").elevateZoom({
+      zoomWindowFadeIn: 500,
+      zoomWindowFadeOut: 500,
+      lensFadeIn: 500,
+      lensFadeOut: 500
+   });
+  }); 
