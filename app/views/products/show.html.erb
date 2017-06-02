@@ -1,51 +1,59 @@
- <br>
- <br>
- <div class="container pad-top pad-bottom" >
-  
-   <% cache @product do %>
-   <br>
-   <br>
-   <br>
-   <h2 class="text-center"><%= @product.name %></h2>
-   <% end %>
-   <div class="row margin-sides">
-     <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
-
-      <% if @product.image_url.present? %>
-      <%= image_tag(@product.image_url, data_zoom_image: "@product.image_url", class: "img-zoom img-responsive product-img") %>
-      
+<div class="container">
+  <div class="show_product">
+    <% cache @product do %>
+    <div class="col-md-12">
+      <h2>
+        <%= @product.name %>
+      </h2>
     </div>
-
-    <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
-      <br>
-      <h3 class=""><strong>Description: </strong><%= @product.description %></h3>
-      
-      <h3>
-       <strong>Colour available: </strong><%= @product.colour %>
-       <br>
-       <strong>Price: </strong> <%= @product.price %>&euro;<br>
-     </h3>
-     <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div></p>
-
-     
-     <div>
-
-       <%= form_tag "/payments/create" do %>
-       <%= render partial: "shared/stripe_checkout_button" %>
-       <% end %>
-     </div>
-     <br>
-     <br>
- <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+    <div class="col-md-12">
       <p>
-        <% if signed_in? && current_user.admin %>
-         <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-default' %>
-      <% end %>
-      <%= link_to 'Back', products_path, class: 'btn btn-default' %>
-    </p>
-    <%= render "new_comment" %>
-      
-    <%= render "comments" %>
-   <% end %>
+        <strong>
+          <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: "@product.image_url") %>
+        </strong>
+      </p>
+    </div>
+    <div class="col-md-12">
+      <p>
+        <%= @product.price / 1 %>
+      </p>
+      <div class="payment">
+        <%= form_tag "/payments/create" do %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+      </div>
+      <p>
+        <%= @product.description %>
+      </p>
+      <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>">
+      </div>
+    </div>
+    <% end %>
   </div>
 
+  <div class="rate-product">
+    <div class="col-md-6 rate-product">
+      <h4>Customer reviews:</h4>
+      
+      <p>
+        <%= render partial: "comments" %>
+      </p>
+    </div>
+    <div class="col-md-6 rate-product">
+      <p>
+        <%= render partial: "new_comment" %>
+      </p>
+    </div>
+  </div>
+
+  <% if signed_in? && current_user.admin? %>
+  <div class="product-button col-md-12">
+    <%= link_to 'Edit', edit_product_path(@product),class: 'btn btn-primary' %>  |
+    <%= link_to 'Back', products_path, class: 'btn btn-primary'  %>
+  </div>
+  <% end %>
+  <br>
+  <br>
+
+</div>
