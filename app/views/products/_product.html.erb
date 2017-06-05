@@ -20,14 +20,16 @@
       <%= product.colour %><br>
       <%= product.price %>&euro;<br></p>
 
-      <%= link_to 'Show', product, class: 'btn btn-default' %>
-      <% if signed_in? && current_user.admin %>
-      <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-default' %>
-      <% end %>
-      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default'%>
-      <% end %>
-    </p>
+     <%= link_to 'Show', product, class:'btn btn-default'%>
+        <% if signed_in? && current_user.admin? %>
+           <%= link_to 'Edit', edit_product_path(product),class:'btn btn-default' %>
+        <% end %>
+        <% if signed_in? && current_user.admin? %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' },class:'btn btn-default'%>
+        <% end %>
+        </p>
+      </div><!-- /col -->
+    <% end %>
+    <% end %>
   </div>
-  <% end %>
-</div>
 </div>
