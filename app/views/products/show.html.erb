@@ -23,6 +23,7 @@
         <%= render partial: "shared/stripe_checkout_button" %>
         <% end %>
       </div>
+
       <p>
         <%= @product.description %>
       </p>
@@ -36,23 +37,31 @@
     <div class="col-md-6 rate-product">
       <h4>Customer reviews:</h4>
       <div class="alert alert-info-review" style="display:none" role="alert">A new comment was posted!</div>
+
+
       <p>
         <%= render partial: "comments" %>
       </p>
     </div>
+
     <div class="col-md-6 rate-product">
       <p>
         <%= render partial: "new_comment" %>
       </p>
+           <br>
+      <br>
+        <% if signed_in? && current_user.admin? %>
+  <div class="product-button col-md-12">
+    <%= link_to 'Edit', edit_product_path(@product),class: 'btn btn-default' %>  
+    <%= link_to 'Back', products_path, class: 'btn btn-default'  %>
+  </div>
+  <% end %>
+  <br>
+
     </div>
   </div>
 
-  <% if signed_in? && current_user.admin? %>
-  <div class="product-button col-md-12">
-    <%= link_to 'Edit', edit_product_path(@product),class: 'btn btn-primary' %>  |
-    <%= link_to 'Back', products_path, class: 'btn btn-primary'  %>
-  </div>
-  <% end %>
+  
   <br>
   <br>
 
