@@ -1,12 +1,16 @@
 <div class="container">
   <div class="show_product" data-product-id="<%= @product.id %>">
     <% cache @product do %>
+    <br>
+    <br>
     <div class="col-md-12">
+    <br>
+    <br>
       <h2>
         <%= @product.name %>
       </h2>
     </div>
-    <div class="col-md-12">
+     <div class="col-s-12">
       <p>
         <strong>
           <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: "@product.image_url") %>
